@@ -9,14 +9,17 @@ import FlightSideBar from "./FlightSearchEngine/FlightSideBar";
 function App() {
   return (
     <div className="App">
-    <Navbar/>
+      <Navbar />
       <Router>
+        <FlightSearchEngine />
+      </Router>
+      {/* <Router>
         <Switch>
           <Route path="/" exact component={FlightSearchEngine} />
           <Route path="/flight-with-return" exact component={FlightSideBar} />
           <Route path="/flight-one-way" exact component={OneWayFlight} />
         </Switch>
-      </Router>
+      </Router> */}
     </div>
   );
 }
