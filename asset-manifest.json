@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Flight-Search-Engine/static/css/main.5e02ebbe.chunk.css",
+    "main.js": "/Flight-Search-Engine/static/js/main.2bb931b0.chunk.js",
+    "main.js.map": "/Flight-Search-Engine/static/js/main.2bb931b0.chunk.js.map",
+    "runtime-main.js": "/Flight-Search-Engine/static/js/runtime-main.339fbd97.js",
+    "runtime-main.js.map": "/Flight-Search-Engine/static/js/runtime-main.339fbd97.js.map",
+    "static/css/2.8e54585f.chunk.css": "/Flight-Search-Engine/static/css/2.8e54585f.chunk.css",
+    "static/js/2.bb7f8ab6.chunk.js": "/Flight-Search-Engine/static/js/2.bb7f8ab6.chunk.js",
+    "static/js/2.bb7f8ab6.chunk.js.map": "/Flight-Search-Engine/static/js/2.bb7f8ab6.chunk.js.map",
+    "static/js/3.6b41a9e5.chunk.js": "/Flight-Search-Engine/static/js/3.6b41a9e5.chunk.js",
+    "static/js/3.6b41a9e5.chunk.js.map": "/Flight-Search-Engine/static/js/3.6b41a9e5.chunk.js.map",
+    "index.html": "/Flight-Search-Engine/index.html",
+    "static/css/2.8e54585f.chunk.css.map": "/Flight-Search-Engine/static/css/2.8e54585f.chunk.css.map",
+    "static/css/main.5e02ebbe.chunk.css.map": "/Flight-Search-Engine/static/css/main.5e02ebbe.chunk.css.map",
+    "static/js/2.bb7f8ab6.chunk.js.LICENSE.txt": "/Flight-Search-Engine/static/js/2.bb7f8ab6.chunk.js.LICENSE.txt",
+    "static/media/Forward.d9052ac4.svg": "/Flight-Search-Engine/static/media/Forward.d9052ac4.svg",
+    "static/media/Kuwait_Airways.72f39500.png": "/Flight-Search-Engine/static/media/Kuwait_Airways.72f39500.png",
+    "static/media/Saudia.ca6e0f57.png": "/Flight-Search-Engine/static/media/Saudia.ca6e0f57.png",
+    "static/media/airAsia.22c5033b.png": "/Flight-Search-Engine/static/media/airAsia.22c5033b.png",
+    "static/media/airIndia.1dff4a8f.png": "/Flight-Search-Engine/static/media/airIndia.1dff4a8f.png",
+    "static/media/airplane.969b2a3d.png": "/Flight-Search-Engine/static/media/airplane.969b2a3d.png",
+    "static/media/emirates.2481f6c1.png": "/Flight-Search-Engine/static/media/emirates.2481f6c1.png",
+    "static/media/qatar_Airways.4845b9de.png": "/Flight-Search-Engine/static/media/qatar_Airways.4845b9de.png",
+    "static/media/vistara.9e076750.png": "/Flight-Search-Engine/static/media/vistara.9e076750.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.339fbd97.js",
+    "static/css/2.8e54585f.chunk.css",
+    "static/js/2.bb7f8ab6.chunk.js",
+    "static/css/main.5e02ebbe.chunk.css",
+    "static/js/main.2bb931b0.chunk.js"
+  ]
+}
