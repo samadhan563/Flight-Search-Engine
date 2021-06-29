@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React from 'react'
+import FlightSearchEngine from "./FlightSearchEngine/SearchEngine"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
+import Navbar from "./FlightSearchEngine/Navbar"
+import OneWayFlight from "./FlightSearchEngine/OneWayFlight";
+import FlightSideBar from "./FlightSearchEngine/FlightSideBar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar/>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={FlightSearchEngine} />
+          <Route path="/flight-with-return" exact component={FlightSideBar} />
+          <Route path="/flight-one-way" exact component={OneWayFlight} />
+        </Switch>
+      </Router>
     </div>
   );
 }
