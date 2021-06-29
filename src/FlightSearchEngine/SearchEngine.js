@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./FlightSearchEngine.css";
 import InputRange from "react-input-range";
-
 import AvailableFlights from './AvailableFlights'
 import flightData from "../data";
 import "react-input-range/lib/css/index.css"
@@ -11,6 +10,7 @@ function FlightSearchEngine() {
     const [isSearchClicked, setIsSearchClicked] = useState(false);
     const [passengerCount, setPassengerCount] = useState(1);
     const [priceRange, setPriceRange] = useState(10000);
+    
     const [bookReturn, setBookReturn] = useState(false);
     const [filteredData, setFilteredData] = useState([]);
     const [returnFilterData, setReturnFilterData] = useState([]);
@@ -21,7 +21,6 @@ function FlightSearchEngine() {
         destination: "",
         departureDate: "",
         returnDate: "",
-        passanger: "",
         country: "",
     });
 
@@ -49,7 +48,8 @@ function FlightSearchEngine() {
         }
     };
 
-    const onSearch = (event) => {
+    const onSearch = () => {
+        // event.preventDefault();
         if (serach.bookReturn && !serach.returnDate) {
             alert("Return date can't be empty!");
         } else if (!serach.originName) {
@@ -59,7 +59,7 @@ function FlightSearchEngine() {
         } else if (!serach.departureDate) {
             alert("Departure date can't be empty!");
         }
-        if (serach.originCity && serach.destinationCity && serach.departureDate) {
+        if (serach.originCity && serach.destination && serach.departureDate) {
             setIsSearchClicked(true);
             handleFilter();
             if (bookReturn && serach.returnDate) {
@@ -88,7 +88,7 @@ function FlightSearchEngine() {
 
 
     const handleFilter = () => {
-        let result = flightData.filter((data) => {
+        let result = flightData.filter((data) =>{
             if (
                 data &&
                 data.from.city &&
@@ -107,8 +107,6 @@ function FlightSearchEngine() {
         });
         setFilteredData(result);
     };
-
-    //for filtering the data of return flights
     const returnFilter = () => {
         let result = flightData.filter((data) => {
             if (
@@ -121,7 +119,7 @@ function FlightSearchEngine() {
                 data.to &&
                 data.to.city &&
                 data.to.city.toLowerCase().includes(serach.originName.trim().toLowerCase()) &&
-                data.depart === serach.departureDate &&
+                data.depart === serach.returnDate &&
                 data.price <= priceRange
             ) {
                 return data;
@@ -135,6 +133,7 @@ function FlightSearchEngine() {
         returnFilter();
     }, [priceRange]);
 
+
     return (
         <div>
             <div className="row  mt-4 ml-2 mr-2 ">
@@ -145,24 +144,24 @@ function FlightSearchEngine() {
                                 <div className="card-body m-1">
                                     <div className="row ">
                                         <ul className="nav-item">
-                                            <li><Link className="nav-link ml-1 mr-0" onClick={changeOneWay}>One Way</Link></li>
-                                            <li><Link className="nav-link "  onClick={changeReturn}>Return</Link> </li>
+                                            <li><Link className="nav-link ml-2 mr-0" onClick={changeOneWay}>One Way</Link></li>
+                                            <li><Link className="nav-link ml-0 " onClick={changeReturn}>Return</Link> </li>
                                         </ul>
                                     </div>
                                     <div className="row ">
                                         <input type="text"
-                                            className="input mt-2 "
+                                            className="input mt-4 "
                                             name="originName"
                                             value={serach.originName}
                                             placeholder="Enter City Origin"
                                             onChange={onChange} />
-                                        <input type="text" className="input mt-2 "
+                                        <input type="text" className="input mt-4 "
                                             name="destination"
                                             value={serach.destination}
                                             placeholder="Enter destination City"
                                             onChange={onChange} />
                                         <input type="text"
-                                            className="input mt-2 "
+                                            className="input mt-4 "
                                             name="departureDate"
                                             value={serach.departureDate}
                                             placeholder="Departure date"
@@ -171,7 +170,7 @@ function FlightSearchEngine() {
                                             onChange={onChange} />
 
                                         {bookReturn && <input type="text"
-                                            className="input mt-2 "
+                                            className="input mt-4 "
                                             name="returnDate"
                                             value={serach.returnDate}
                                             placeholder="Enter return date"
@@ -188,7 +187,7 @@ function FlightSearchEngine() {
                                             </button>
                                             <div className="text-muted">  {passengerCount} passengers
                                             </div>
-                                            <button type="button"  className="btn btn-secondary ml-2"
+                                            <button type="button" className="btn btn-secondary ml-2"
                                                 onClick={() => handleCount("add")} >
                                                 +
                                             </button>
@@ -241,5 +240,5 @@ function FlightSearchEngine() {
 
 export default FlightSearchEngine
 /*
-https://github.com/smishra11/Fight_Search
+
 */

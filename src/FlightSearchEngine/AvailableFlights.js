@@ -48,7 +48,7 @@ function AvailableFlights(props) {
                                             passengerCount={passengerCount}
                                         />
                                     </div>
-                                    {returnFilterData.length && returnFilterData ? (
+                                    {returnFilterData.length>0 && returnFilterData ? (
                                         <div className="col">
                                             <div style={{ color: "deepskyblue", fontWeight: "bold" }}>
                                                 Return flight
@@ -62,7 +62,7 @@ function AvailableFlights(props) {
                                     ) : null}
                                 </div>
                             ) : (
-                                <>
+                                <div>
                                     <div style={{ color: "deepskyblue", fontWeight: "bold" }}>
                                         Departure flight
                                         <p>{filteredData[0].depart}</p>
@@ -71,7 +71,7 @@ function AvailableFlights(props) {
                                         filteredData={filteredData}
                                         passengerCount={passengerCount}
                                     />
-                                </>
+                                </div>
                             )}
                         </div>
                     </div>

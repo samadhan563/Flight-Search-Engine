@@ -11,41 +11,28 @@ function TicketCard(props) {
             <div className="card-body">
               <div style={{ display: 'flex' }}>
                 <div
-                  style={{
-                    width: '100%',
-                    fontSize: '13px',
-                    display: 'flex',
-                    lineHeight: '1.5rem',
-                  }}
-                >
+                  style={{width: '100%', fontSize: '13px', display: 'flex', lineHeight: '1.5rem'}}>
                   <div>
-                    <div style={{ marginBottom: '6px', display: 'flex',justifyContent: 'space-between',
-                      }}>
+                    <div style={{ marginBottom: '6px', display: 'flex',justifyContent: 'space-between', }}>
                       <span>
-                        <b>₹ {data.price * passengerCount}</b>
+                        <h4>₹ {data.price * passengerCount}</h4>
                       </span>
                       <span style={{ fontSize: '11px' }}>
                         <b>{passengerCount} P</b>
                       </span>
                     </div>
                     <div>
-                      <b>
+                      <h5>
                         {data.from.short} {'>>'} {data.to.short}
-                      </b>
+                      </h5>
                     </div>
                     <div>{data.code}</div>
-                    <div>Depart: {data.departTime}</div>
-                    <div>Arrive: {data.arrivalTime}</div>
+                    <div><b>Depart:</b> {data.departTime}</div>
+                    <div><b>Arrive:</b> {data.arrivalTime}</div>
                   </div>
                 </div>
                 <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    width: '40%',
-                    flexDirection: 'column',
-                  }}
-                >
+                  style={{ display: 'flex', alignItems: 'center',  width: '40%',  flexDirection: 'column', }} >
                   <div style={{ height: '100px', width: '140px' }}>
                     <img
                       src={data.flightImg}
@@ -54,9 +41,7 @@ function TicketCard(props) {
                     />
                   </div>
                   <div>
-                    <button type="button" className="btn btn-info">
-                      <b>Book</b>
-                    </button>
+                    <button type="button" className="btn btn-info"> <b>Book</b> </button>
                   </div>
                 </div>
               </div>

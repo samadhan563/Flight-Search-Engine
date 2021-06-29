@@ -18,6 +18,7 @@
 
 .btn {
   display: inline-block;
+  height: 50px;
   font-weight: 400;
   color: #212529;
   text-align: center;
@@ -135,6 +136,7 @@
   /* margin-left: -12px; */
   margin: 5px;
   width: 100%;
+  padding-bottom: 10px;
   border-radius: 5px;
   padding: 5px ;
   display: flex;
@@ -142,9 +144,9 @@
   align-items: center;
 }
 .nav-item li {
-
-  margin-top: 5px ;
-  margin-bottom: 5px;
+  padding-bottom: 10px;
+  margin-top: 10px ;
+  margin-bottom: 10px;
   /* paddig: 5px ; */
   border-radius: 4px;
   list-style: none;
@@ -152,8 +154,9 @@
  
 }
 .nav-link {
-  padding-top: 5px ;
-  padding-bottom: 5px;
+
+  padding-top: 10px ;
+  padding-bottom: 10px;
   width: 100%;
   margin: 5px;
   border-radius: 4px;
@@ -164,6 +167,8 @@
   background-color: white;
   color: #000;
   margin: 5px;
+  padding-top: 10px ;
+  padding-bottom: 10px;
   padding-right: 10px;
   padding-left: 10px;
   border-radius: 4px;
@@ -173,7 +178,7 @@
 
 .input {
   width: 100%;
-  height: 45px;
+  height: 50px;
   font-family: emoji;
   font-size: 16px;
   margin: 5px;
@@ -210,7 +215,7 @@ hr {
   position: relative;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px;
+  padding: 15px;
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
