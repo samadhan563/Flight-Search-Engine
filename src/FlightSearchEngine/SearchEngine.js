@@ -137,7 +137,7 @@ function FlightSearchEngine() {
 
     return (
         <div>
-            <div className="row row mt-4 ml-2 mr-2 ">
+            <div className="row  mt-4 ml-2 mr-2 ">
                 <div className=" col-md-4 ">
                     <div className="card mb-4">
                         <div className="card-body">
@@ -145,8 +145,8 @@ function FlightSearchEngine() {
                                 <div className="card-body m-1">
                                     <div className="row ">
                                         <ul className="nav-item">
-                                            <li><Link className="nav-link ml-3 mr-2" onClick={changeOneWay}>One Way</Link></li>
-                                            <li><Link className="nav-link ml-2"  onClick={changeReturn}>Return</Link> </li>
+                                            <li><Link className="nav-link ml-1 mr-0" onClick={changeOneWay}>One Way</Link></li>
+                                            <li><Link className="nav-link "  onClick={changeReturn}>Return</Link> </li>
                                         </ul>
                                     </div>
                                     <div className="row ">

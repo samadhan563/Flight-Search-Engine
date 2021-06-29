@@ -1,6 +1,6 @@
 import React from "react";
 import "./FlightSearchEngine.css";
-import airplane from "../Images/airplane.png";
+import airoplane from "../Images/airplane.png";
 
 function EmptyPage() {
   return (
@@ -11,7 +11,7 @@ function EmptyPage() {
           <div className="d-flex justify-content-center">
             <div style={{ height: "100px", width: "100px" }}>
               <img
-                src={airplane}
+                src={airoplane}
                 alt="logo"
                 style={{ height: "100%", width: "100%" }}
               />
