@@ -7,7 +7,7 @@ function TicketCard(props) {
     <>
       {filteredData.map((data, i) => {
         return (
-          <div className="card mb-4" id="ticket_card" key={i}>
+          <div className="card hover mb-4" id="ticket_card" key={i}>
             <div className="card-body">
               <div style={{ display: 'flex' }}>
                 <div
@@ -17,14 +17,10 @@ function TicketCard(props) {
                       <span>
                         <h4>₹ {data.price * passengerCount}</h4>
                       </span>
-                      <span style={{ fontSize: '11px' }}>
-                        <b>{passengerCount} P</b>
-                      </span>
+                      <span style={{ fontSize: '12px' }}> <b>{passengerCount} P</b></span>
                     </div>
                     <div>
-                      <h5>
-                        {data.from.short} {'>>'} {data.to.short}
-                      </h5>
+                      <h5>{data.from.short} {'>>'} {data.to.short}</h5>
                     </div>
                     <div>{data.code}</div>
                     <div><b>Depart:</b> {data.departTime}</div>

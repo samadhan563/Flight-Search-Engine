@@ -10,7 +10,7 @@ function FlightSearchEngine() {
     const [isSearchClicked, setIsSearchClicked] = useState(false);
     const [passengerCount, setPassengerCount] = useState(1);
     const [priceRange, setPriceRange] = useState(10000);
-    
+
     const [bookReturn, setBookReturn] = useState(false);
     const [filteredData, setFilteredData] = useState([]);
     const [returnFilterData, setReturnFilterData] = useState([]);
@@ -49,7 +49,7 @@ function FlightSearchEngine() {
     };
 
     const onSearch = () => {
-        // event.preventDefault();
+
         if (serach.bookReturn && !serach.returnDate) {
             alert("Return date can't be empty!");
         } else if (!serach.originName) {
@@ -59,7 +59,7 @@ function FlightSearchEngine() {
         } else if (!serach.departureDate) {
             alert("Departure date can't be empty!");
         }
-        if (serach.originCity && serach.destination && serach.departureDate) {
+        if (serach.originName && serach.destination && serach.departureDate) {
             setIsSearchClicked(true);
             handleFilter();
             if (bookReturn && serach.returnDate) {
@@ -82,13 +82,9 @@ function FlightSearchEngine() {
     const handleFocus = (e) => {
         e.currentTarget.type = "date";
     };
-    const handleBlur = (e) => {
-        e.currentTarget.type = "text";
-    };
-
 
     const handleFilter = () => {
-        let result = flightData.filter((data) =>{
+        let result = flightData.filter((data) => {
             if (
                 data &&
                 data.from.city &&
@@ -129,6 +125,7 @@ function FlightSearchEngine() {
     };
 
     useEffect(() => {
+        setPriceRange(priceRange);
         handleFilter();
         returnFilter();
     }, [priceRange]);
@@ -138,12 +135,12 @@ function FlightSearchEngine() {
         <div>
             <div className="row  mt-4 ml-2 mr-2 ">
                 <div className=" col-md-4 ">
-                    <div className="card mb-4">
+                    <div className="card hover mb-4">
                         <div className="card-body">
                             <div className="card ">
                                 <div className="card-body m-1">
                                     <div className="row ">
-                                        <ul className="nav-item">
+                                        <ul className="nav-item btn-group">
                                             <li><Link className="nav-link ml-2 mr-0" onClick={changeOneWay}>One Way</Link></li>
                                             <li><Link className="nav-link ml-0 " onClick={changeReturn}>Return</Link> </li>
                                         </ul>
@@ -166,7 +163,9 @@ function FlightSearchEngine() {
                                             value={serach.departureDate}
                                             placeholder="Departure date"
                                             onFocus={handleFocus}
-                                            onBlur={handleBlur}
+                                            onBlur={(e) => {
+                                                e.currentTarget.type = "text";
+                                            }}
                                             onChange={onChange} />
 
                                         {bookReturn && <input type="text"
@@ -175,14 +174,16 @@ function FlightSearchEngine() {
                                             value={serach.returnDate}
                                             placeholder="Enter return date"
                                             onFocus={handleFocus}
-                                            onBlur={handleBlur}
+                                            onBlur={(e) => {
+                                                e.currentTarget.type = "text";
+                                            }}
                                             onChange={onChange} />
                                         }
                                         <div
                                             className="d-flex justify-content-center mt-2 block"
                                             style={{ alignItems: "center" }}
                                         >
-                                            <button type="button" className="btn btn-secondary  mr-2" onClick={() => handleCount("less")} >
+                                            <button type="button" className="btn btn-secondary  mr-2 ml-1" onClick={() => handleCount("less")} >
                                                 -
                                             </button>
                                             <div className="text-muted">  {passengerCount} passengers
