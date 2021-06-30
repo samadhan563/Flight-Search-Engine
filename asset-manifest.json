@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Flight-Search-Engine/static/css/main.0394dfb8.chunk.css",
-    "main.js": "/Flight-Search-Engine/static/js/main.7956b071.chunk.js",
-    "main.js.map": "/Flight-Search-Engine/static/js/main.7956b071.chunk.js.map",
+    "main.css": "/Flight-Search-Engine/static/css/main.424584af.chunk.css",
+    "main.js": "/Flight-Search-Engine/static/js/main.75d2917f.chunk.js",
+    "main.js.map": "/Flight-Search-Engine/static/js/main.75d2917f.chunk.js.map",
     "runtime-main.js": "/Flight-Search-Engine/static/js/runtime-main.1059db4d.js",
     "runtime-main.js.map": "/Flight-Search-Engine/static/js/runtime-main.1059db4d.js.map",
     "static/css/2.8e54585f.chunk.css": "/Flight-Search-Engine/static/css/2.8e54585f.chunk.css",
-    "static/js/2.3e5cd124.chunk.js": "/Flight-Search-Engine/static/js/2.3e5cd124.chunk.js",
-    "static/js/2.3e5cd124.chunk.js.map": "/Flight-Search-Engine/static/js/2.3e5cd124.chunk.js.map",
+    "static/js/2.d3c595c5.chunk.js": "/Flight-Search-Engine/static/js/2.d3c595c5.chunk.js",
+    "static/js/2.d3c595c5.chunk.js.map": "/Flight-Search-Engine/static/js/2.d3c595c5.chunk.js.map",
     "static/js/3.d4b718ec.chunk.js": "/Flight-Search-Engine/static/js/3.d4b718ec.chunk.js",
     "static/js/3.d4b718ec.chunk.js.map": "/Flight-Search-Engine/static/js/3.d4b718ec.chunk.js.map",
     "index.html": "/Flight-Search-Engine/index.html",
     "static/css/2.8e54585f.chunk.css.map": "/Flight-Search-Engine/static/css/2.8e54585f.chunk.css.map",
-    "static/css/main.0394dfb8.chunk.css.map": "/Flight-Search-Engine/static/css/main.0394dfb8.chunk.css.map",
-    "static/js/2.3e5cd124.chunk.js.LICENSE.txt": "/Flight-Search-Engine/static/js/2.3e5cd124.chunk.js.LICENSE.txt",
+    "static/css/main.424584af.chunk.css.map": "/Flight-Search-Engine/static/css/main.424584af.chunk.css.map",
+    "static/js/2.d3c595c5.chunk.js.LICENSE.txt": "/Flight-Search-Engine/static/js/2.d3c595c5.chunk.js.LICENSE.txt",
     "static/media/Forward.d9052ac4.svg": "/Flight-Search-Engine/static/media/Forward.d9052ac4.svg",
     "static/media/Kuwait_Airways.72f39500.png": "/Flight-Search-Engine/static/media/Kuwait_Airways.72f39500.png",
     "static/media/Saudia.ca6e0f57.png": "/Flight-Search-Engine/static/media/Saudia.ca6e0f57.png",
@@ -27,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.1059db4d.js",
     "static/css/2.8e54585f.chunk.css",
-    "static/js/2.3e5cd124.chunk.js",
-    "static/css/main.0394dfb8.chunk.css",
-    "static/js/main.7956b071.chunk.js"
+    "static/js/2.d3c595c5.chunk.js",
+    "static/css/main.424584af.chunk.css",
+    "static/js/main.75d2917f.chunk.js"
   ]
 }
